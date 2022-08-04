@@ -40,7 +40,7 @@ class PriceCoinDetailView(generics.ListAPIView):
         if getattr(self, "swagger_fake_view", False):
             return Price.objects.none()
         queryset = self.queryset.filter(
-            name_coin=self.kwargs['pk']
+            name_coin=self.kwargs['pk1']
         )
         return queryset
 
@@ -54,7 +54,7 @@ class PriceMarketDetailView(generics.ListAPIView):
         if getattr(self, "swagger_fake_view", False):
             return Price.objects.none()
         queryset = self.queryset.filter(
-            market=self.kwargs['pk']
+            market=self.kwargs['pk1']
         )
         return queryset
 
