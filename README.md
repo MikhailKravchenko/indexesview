@@ -26,8 +26,7 @@ https://docs.docker.com/compose/install/compose-plugin/#installing-compose-on-li
 
 Клонировать репозиторий в удобное место:
 
-    git@github.com:MikhailKravchenko/siteshot_bot.git
-
+    git@github.com:MikhailKravchenko/indexesview.git
 
  Собираем образы:
 
