@@ -10,3 +10,44 @@ indexesview
 Предпочтительный стек:
 - django-rest-framework
 - postgres
+
+
+# Jpeger bot for Telegram
+Бот для создания веб-скриншотов.
+Чтобы получить скриншот - отправьте URL адрес сайта. 
+Например, wikipedia.org.
+
+• С помощью бота вы можете проверять подозрительные ссылки. (Айпилоггеры, фишинговые веб-сайты, скримеры и т.п)
+
+• Вы также можете добавить меня в свои чаты, и я смогу проверять ссылки, которые отправляют пользователи
+
+# Documentation
+
+Полезные команды:
+
+    /start - Приветствие
+    /admin - Команда для админского чата выводит информацию о командах доступных для администратора
+    /setadminchat - назначает текущий чат административным
+    /statistic - получение статистики о работе бота (доступ только в админском чате)
+
+
+
+# Get Started:
+
+Для запуска понадобится сформировать докер контейнеры и запустить их. 
+Если на сервере не установлен Docker, то самое время его установить:
+
+https://docs.docker.com/engine/install/ubuntu/
+https://docs.docker.com/compose/install/compose-plugin/#installing-compose-on-linux-systems
+
+Клонировать репозиторий в удобное место:
+
+    git@github.com:MikhailKravchenko/siteshot_bot.git
+
+
+ Собираем образы:
+
+    docker-compose -f docker-compose.yml up -d --build
+
+# Information
+Для парсинга/обновления данных дернуть ручку : api/v1/refresh/
