@@ -74,10 +74,10 @@ class ParsePrice:
 
         for list_price in self.price:
             for detail in list_price:
+                if detail['last'] is not None:
+                    updated_values = {'price': float(detail['last'])}
 
-                updated_values = {'price': float(detail['last'])}
-
-                obj, created = Price.objects.update_or_create(
-                    market=detail['market'], name_coin=detail['id'],
-                    defaults=updated_values
-                )
+                    obj, created = Price.objects.update_or_create(
+                        market=detail['market'], name_coin=detail['id'],
+                        defaults=updated_values
+                    )
