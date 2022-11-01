@@ -1,36 +1,36 @@
-# Indexesview
+#indexesview
 indexesview
 
-Веб-сервис, который:
-- получает курсы криптовалют с coingecko
-- сохраняет их адрес, имя, цену в БД
-- апи-точка отдает эти данные, с параметрами фильтрации по имени, по маркету, по имени и маркету
-- подключен сваггер
-Данное решение упаковвано в докер компоуз
-Предпочтительный стек:
-- django-rest-framework
+Web service that:
+- receives cryptocurrency rates from coinchecko
+- saves their address, name, price in the database
+- api-point returns this data, with filtering options by name, by market, by name and market
+- connected swagger
+This solution is packaged in docker compose
+Preferred stack:
+-django-rest-framework
 - postgres
 
 
 
-# Documentation
+# documentation
 
 
 # Get Started:
 
-Для запуска понадобится сформировать докер контейнеры и запустить их. 
-Если на сервере не установлен Docker, то самое время его установить:
+To start, you need to create docker containers and run them.
+If Docker is not installed on the server, then it's time to install it:
 
 https://docs.docker.com/engine/install/ubuntu/
 https://docs.docker.com/compose/install/compose-plugin/#installing-compose-on-linux-systems
 
-Клонировать репозиторий в удобное место:
+Clone the repository to a convenient location:
 
     git@github.com:MikhailKravchenko/indexesview.git
 
- Собираем образы:
+ Collecting images:
 
     docker-compose -f docker-compose.yml up -d --build
 
-# Information
-Для парсинга/обновления данных дернуть ручку : api/v1/refresh/
+#Information
+To parse/update data, pull the handle: api/v1/refresh/
